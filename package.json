@@ -1,0 +1,19 @@
+{
+  "name": "node-onnistuu",
+  "version": "1.0.0",
+  "description": "Node.js client for onnistuu.fi API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otavanopisto/node-onnistuu.git"
+  },
+  "author": "Heikki Kurhinen <heikki.kurhinen@gmail.com> (http://elemmings.fi)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/otavanopisto/node-onnistuu/issues"
+  },
+  "homepage": "https://github.com/otavanopisto/node-onnistuu#readme"
+}
