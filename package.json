@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/otavanopisto/node-onnistuu/issues"
   },
-  "homepage": "https://github.com/otavanopisto/node-onnistuu#readme"
+  "homepage": "https://github.com/otavanopisto/node-onnistuu#readme",
+  "dependencies": {
+    "shortid": "^2.2.4"
+  }
 }
