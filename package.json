@@ -4,7 +4,7 @@
   "description": "Node.js client for onnistuu.fi API",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "test": "./node_modules/.bin/mocha --reporter nyan"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/otavanopisto/node-onnistuu#readme",
   "dependencies": {
-    "request": "^2.69.0",
     "shortid": "^2.2.4"
   },
   "devDependencies": {
