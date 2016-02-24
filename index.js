@@ -1,5 +1,6 @@
 var crypto = require('crypto');
 var shortid = require('shortid');
+var request = require('request');
 
 var decrypt = function (key, iv, encryptdata) {
   var data = new Buffer(encryptdata, 'base64').toString('binary');
@@ -41,12 +42,22 @@ OnnistuuClient.prototype.createRequestBody = function (requirements, document, r
   var body = {
     customer: this.customer_id,
     return_failure: this.failure_url,
-    data: encrypt(this.this.encryption_key, this.iv, JSON.stringify(encryptData)),
+    data: encrypt(this.encryption_key, this.iv, JSON.stringify(encryptData)),
     iv: this.iv,
     cipher: 'rijndael-128',
     padding: 'pkcs5'
   }
   return body;
+};
+
+OnnistuuClient.prototype.decryptResponse = function(data, iv, callback){
+  var decryptedData = decrypt(this.encryption_key, iv, data);
+  try {
+    var response = JSON.parse(decryptedData);
+    callback(null, response);
+  } catch(err){
+    callback(err);
+  }
 };
 
 module.exports = OnnistuuClient;

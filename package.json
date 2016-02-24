@@ -17,6 +17,11 @@
   },
   "homepage": "https://github.com/otavanopisto/node-onnistuu#readme",
   "dependencies": {
+    "request": "^2.69.0",
     "shortid": "^2.2.4"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
   }
 }
